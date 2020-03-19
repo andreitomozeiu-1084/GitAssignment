@@ -7,6 +7,10 @@ public class TestGit {
 		
 		System.out.println("Hello Git! Denumirea proiectului de licenta este \"" + denumireProiectLicenta + "\"");
 		
+		Cursant cursant = new Cursant("Ion", 25);
+		System.out.println("Suma achitata: " + cursant.getSumaAchitata());
+		cursant.achitaSuma(450);
+		System.out.println("Suma achitata: " + cursant.getSumaAchitata());
 	}
 
 }

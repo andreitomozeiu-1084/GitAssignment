@@ -1,6 +1,6 @@
 package ro.ase.csie.cts.g1084.tema2;
 
-public class Cursant {
+public class Cursant implements Financiar {
 	private String nume;
 	private int varsta;
 	private float sumaAchitata;
@@ -8,7 +8,8 @@ public class Cursant {
 	public Cursant(String nume, int varsta)
 	{
 		setNume(nume);;
-		setVarsta(varsta);;
+		setVarsta(varsta);
+		this.sumaAchitata = 0f;
 	}
 
 	public String getNume() {
@@ -33,6 +34,11 @@ public class Cursant {
 
 	public void setSumaAchitata(float sumaAchitata) {
 		this.sumaAchitata = sumaAchitata;
+	}
+
+	@Override
+	public void achitaSuma(float suma) {
+		this.sumaAchitata += suma; 		
 	}
 	
 	
